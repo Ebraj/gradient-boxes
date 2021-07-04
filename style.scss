@@ -4,21 +4,20 @@
 
 // Importing the fonts
 @font-face {
-    font-family: OpenSansBold;
-    src: url(../fonts/OpenSansBold.ttf);
+    font-family: TelegrafUltraBold;
+    src: url(../fonts/TelegrafUltraBold.otf);
 }
 @font-face {
-    font-family: OpenSansRegular;
-    src: url(../fonts/OpenSansRegular.ttf);
+    font-family: TelegrafRegular;
+    src: url(../fonts/TelegrafRegular.otf);
 }
 
 //General Styling
 body{
     background-color: $primary-dark;
     color: $primary-white;
-    font-family: "OpenSansRegular";
+    font-family: "TelegrafRegular";
 }
-
 //Classes Styling
 .container-1000{
     @include container-width(1000px);
@@ -30,12 +29,27 @@ body{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap : 40px;
-        div{
+        >div{
             height: 300px;
-            font-family: "OpenSansBold";
+            font-family: "TelegrafUltraBold";
             color: $secondary-dark;
-            @include flex-container(row,center,center,no-wrap);
+            @include flex-container(column,flex-start,space-between,no-wrap);
+            padding: 25px;
             border: 2px solid transparent;
+            >div{
+                &:nth-child(1){
+                    align-self: flex-end;
+                }
+                &:nth-child(2){
+                    justify-content: flex-end;
+                    h1{
+                        font-family: "TelegrafUltraBold";
+                        font-size: 2.5rem;
+                        padding: 25px 0;
+                        line-height: 1.15;
+                    }
+                }
+            }
             &:nth-child(1){
                 background: rgb(255,175,189);
                 background: linear-gradient(66deg, rgba(255,175,189,1) 0%, rgba(255,195,160,1) 100%);

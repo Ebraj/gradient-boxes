@@ -1,17 +1,17 @@
 @font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/OpenSansBold.ttf);
+  font-family: TelegrafUltraBold;
+  src: url(../fonts/TelegrafUltraBold.otf);
 }
 
 @font-face {
-  font-family: OpenSansRegular;
-  src: url(../fonts/OpenSansRegular.ttf);
+  font-family: TelegrafRegular;
+  src: url(../fonts/TelegrafRegular.otf);
 }
 
 body {
   background-color: #000000;
   color: #eeeeff;
-  font-family: "OpenSansRegular";
+  font-family: "TelegrafRegular";
 }
 
 .container-1000 {
@@ -45,66 +45,85 @@ body {
   grid-gap: 40px;
 }
 
-.container-1000 .grid__container div {
+.container-1000 .grid__container > div {
   height: 300px;
-  font-family: "OpenSansBold";
-  color: #252525;
+  font-family: "TelegrafUltraBold";
+  color: #1d1d1d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px;
   border: 2px solid transparent;
 }
 
-.container-1000 .grid__container div:nth-child(1) {
+.container-1000 .grid__container > div > div:nth-child(1) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.container-1000 .grid__container > div > div:nth-child(2) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container-1000 .grid__container > div > div:nth-child(2) h1 {
+  font-family: "TelegrafUltraBold";
+  font-size: 2.5rem;
+  padding: 25px 0;
+  line-height: 1.15;
+}
+
+.container-1000 .grid__container > div:nth-child(1) {
   background: #ffafbd;
   background: linear-gradient(66deg, #ffafbd 0%, #ffc3a0 100%);
 }
 
-.container-1000 .grid__container div:nth-child(2) {
+.container-1000 .grid__container > div:nth-child(2) {
   background: #d6cff6;
   background: radial-gradient(circle, #d6cff6 0%, #b1a3d7 100%);
 }
 
-.container-1000 .grid__container div:nth-child(3) {
+.container-1000 .grid__container > div:nth-child(3) {
   background: #93ff8f;
   background: radial-gradient(circle, #93ff8f 0%, #9ada98 48%, #8edb90 100%);
 }
 
-.container-1000 .grid__container div:nth-child(4) {
+.container-1000 .grid__container > div:nth-child(4) {
   background: #fff062;
   background: radial-gradient(circle, #fff062 0%, #dbdb8e 100%);
 }
 
-.container-1000 .grid__container div:nth-child(5) {
+.container-1000 .grid__container > div:nth-child(5) {
   background: #f9a29e;
   background: radial-gradient(circle, #f9a29e 0%, #f6b4a8 100%);
 }
 
-.container-1000 .grid__container div:nth-child(6) {
+.container-1000 .grid__container > div:nth-child(6) {
   background: #62dcff;
   background: radial-gradient(circle, #62dcff 0%, #a8d5f6 100%);
 }
 
-.container-1000 .grid__container div:hover {
+.container-1000 .grid__container > div:hover {
   background: #000000;
   color: #eeeeff;
   border: 2px solid #eeeeff;
   position: relative;
 }
 
-.container-1000 .grid__container div:hover::after {
+.container-1000 .grid__container > div:hover::after {
   position: absolute;
   content: "";
   top: 15px;
