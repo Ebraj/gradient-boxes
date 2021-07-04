@@ -1,2 +1,2 @@
 # UI
-![Gradient Boxes](Gradient Boxes.png)
+![Gradient Boxes](gradient-boxes.png)
