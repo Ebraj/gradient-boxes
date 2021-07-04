@@ -18,6 +18,11 @@ body{
     color: $primary-white;
     font-family: "TelegrafRegular";
 }
+svg{
+    fill : $primary-dark;
+    cursor: pointer;
+}
+
 //Classes Styling
 .container-1000{
     @include container-width(1000px);
@@ -39,6 +44,9 @@ body{
             >div{
                 &:nth-child(1){
                     align-self: flex-end;
+                    >div{
+                        display: inline-block;
+                    }
                 }
                 &:nth-child(2){
                     justify-content: flex-end;
@@ -79,6 +87,9 @@ body{
                 color: $primary-white;
                 border: 2px solid $primary-white;
                 position: relative;
+                svg{
+                    fill: $primary-white;
+                }
                 &::after{
                     position: absolute;
                     content: "";

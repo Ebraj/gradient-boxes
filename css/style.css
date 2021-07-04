@@ -14,6 +14,11 @@ body {
   font-family: "TelegrafRegular";
 }
 
+svg {
+  fill: #000000;
+  cursor: pointer;
+}
+
 .container-1000 {
   width: 100%;
   max-width: 1000px;
@@ -73,6 +78,10 @@ body {
       align-self: flex-end;
 }
 
+.container-1000 .grid__container > div > div:nth-child(1) > div {
+  display: inline-block;
+}
+
 .container-1000 .grid__container > div > div:nth-child(2) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -121,6 +130,10 @@ body {
   color: #eeeeff;
   border: 2px solid #eeeeff;
   position: relative;
+}
+
+.container-1000 .grid__container > div:hover svg {
+  fill: #eeeeff;
 }
 
 .container-1000 .grid__container > div:hover::after {
