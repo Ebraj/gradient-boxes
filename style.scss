@@ -1,3 +1,82 @@
 @import "./partials/colors";
 @import "./partials/mixins";
 @import "./partials/typography";
+
+// Importing the fonts
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../fonts/OpenSansBold.ttf);
+}
+@font-face {
+    font-family: OpenSansRegular;
+    src: url(../fonts/OpenSansRegular.ttf);
+}
+
+//General Styling
+body{
+    background-color: $primary-dark;
+    color: $primary-white;
+    font-family: "OpenSansRegular";
+}
+
+//Classes Styling
+.container-1000{
+    @include container-width(1000px);
+    @include flex-container(column,stretch,center,no-wrap);
+    // background-color: pink;
+    min-height: 100vh;
+
+    .grid__container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap : 40px;
+        div{
+            height: 300px;
+            font-family: "OpenSansBold";
+            color: $secondary-dark;
+            @include flex-container(row,center,center,no-wrap);
+            border: 2px solid transparent;
+            &:nth-child(1){
+                background: rgb(255,175,189);
+                background: linear-gradient(66deg, rgba(255,175,189,1) 0%, rgba(255,195,160,1) 100%);
+            }
+            &:nth-child(2){
+                background: rgb(214,207,246);
+                background: radial-gradient(circle, rgba(214,207,246,1) 0%, rgba(177,163,215,1) 100%);
+            }
+            &:nth-child(3){
+                background: rgb(147,255,143);
+                background: radial-gradient(circle, rgba(147,255,143,1) 0%, rgba(154,218,152,1) 48%, rgba(142,219,144,1) 100%);
+            }
+            &:nth-child(4){
+                background: rgb(255,240,98);
+                background: radial-gradient(circle, rgba(255,240,98,1) 0%, rgba(219,219,142,1) 100%);
+            }
+            &:nth-child(5){
+                background: rgb(249,162,158);
+                background: radial-gradient(circle, rgba(249,162,158,1) 0%, rgba(246,180,168,1) 100%);
+            }
+            &:nth-child(6){
+                background: rgb(98,220,255);
+                background: radial-gradient(circle, rgba(98,220,255,1) 0%, rgba(168,213,246,1) 100%);
+            }
+            &:hover{
+                background: $primary-dark;
+                color: $primary-white;
+                border: 2px solid $primary-white;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 15px;
+                    left: -15px;
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid $primary-white;
+                    z-index: -1;
+                }
+            }
+           
+        }
+    }
+}
